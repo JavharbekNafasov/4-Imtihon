@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="./image/iconread.svg">
+   <link rel="stylesheet" href="./css/bcssfiles/bootstrap.css">
+   <title>BookShelter</title>
+</head>
+<body>
+   <!-- HEADER  -->
+   <header class="mt-4">
+      <div class="container d-flex align-items-center p-2 ps-4 border-bottom">
+         <img class="header-image" src="./image/bookshelter.svg" alt="bookshelter">
+         <form id="search-form" class="w-100 ms-5 ps-5" action="/action_page.php">
+            <input id="search-input" class="w-50 rounded-pill p-2 bg-light border border-white" type="text" placeholder="&#128269 Search books">
+         </form>
+      </div>
+
+      <div class="container p-2 d-flex justify-content-between align-items-center border-bottom">
+         <p id="show-result" style="margin: 0; margin-left: 350px;">Showing <span>6</span> Result(s)</p>
+         <button id="btn-newest" type="button" class="btn btn-secondary text-white me-4">
+            <img class="" src="./image/iconorder.svg" alt=""> Order by newest
+         </button>
+      </div>
+   </header>   
+   
+   <main>
+      <section class="container mb-5">
+         <div class="row ">
+            <!-- LEFT CONTAINER  -->
+            <div class="col-3 p-3">
+               <h3>Bookmarks</h3>
+               <p>If you don't like to read, you haven't found the right book</p>
+               <ul class="p-0">
+                  <li class="rounded-3 d-flex bg-light p-3 justify-content-between mb-2">
+                     <div>
+                        <h5 class="h5 m-0">Python</h5>
+                        <p class="text-secondary m-0">David M.Beazly</p>
+                     </div>
+                     <div class="d-flex align-items-center gap-1">
+                        <span class="btn p-0"><img src="./image/iconread.svg" alt="info"></span>
+                        <span class="btn p-0"><img src="./image/icondelete.svg" alt="del"></span>
+                     </div>
+                  </li>
+                  <li class="rounded-3 d-flex bg-light p-3 justify-content-between mb-2">
+                     <div>
+                        <h5 class="h5 m-0">JavaScript</h5>
+                        <p class="text-secondary m-0">David M.Beazly</p>
+                     </div>
+                     <div class="d-flex align-items-center gap-1">
+                        <span class="btn p-0"><img src="./image/iconread.svg" alt="info"></span>
+                        <span class="btn p-0"><img src="./image/icondelete.svg" alt="del"></span>
+                     </div>
+                  </li>
+                  <li class="rounded-3 d-flex bg-light p-3 justify-content-between mb-2">
+                     <div>
+                        <h5 class="h5 m-0">Jquery</h5>
+                        <p class="text-secondary m-0">David M.Beazly</p>
+                     </div>
+                     <div class="d-flex align-items-center gap-1">
+                        <span class="btn p-0"><img src="./image/iconread.svg" alt="info"></span>
+                        <span class="btn p-0"><img src="./image/icondelete.svg" alt="del"></span>
+                     </div>
+                  </li>
+                  <li class="rounded-3 d-flex bg-light p-3 justify-content-between mb-2">
+                     <div>
+                        <h5 class="h5 m-0">.Net</h5>
+                        <p class="text-secondary m-0">David M.Beazly</p>
+                     </div>
+                     <div class="d-flex align-items-center gap-1">
+                        <span class="btn p-0"><img src="./image/iconread.svg" alt="info"></span>
+                        <span class="btn p-0"><img src="./image/icondelete.svg" alt="del"></span>
+                     </div>
+                  </li>
+               </ul>
+            </div>    
+            
+            <!-- RIGHT CONTAINER  -->            
+            <div class="col-9 p-0 bg-light">
+               <ul id="bookmarks-list" class="list-unstyled row p-4 m-0 mb-3 gap-3">
+                  <li class="p-0 cards-list" style="width: 300px;">
+                     <div class="card rounded-3">
+                        <img class="w-100 movie-youtube-link p-3 cards-image" src="http://books.google.com/books/content?id=mthYCwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api" style="height: 320px;" alt="image">
+                        
+                        <div class="card-body">
+                           <h3 class="cards-title">Python</h3>
+                           
+                           <p class="text-secondary card-text m-0 cards-name">David M. Beazley</p>               
+                           <p class="card-text text-secondary cards-year">2009</p>               
+                           <div class="cards-button">
+                              <div class="mb-1 d-flex gap-1">
+                                 <button type="button" class="btn w-100 btn-warning">Bookmark</button>
+                                 <button type="button" class="btn w-100 btn-light text-primary">More Info</button>
+                              </div>
+                              <button type="button" class="btn w-100 btn-secondary">Read</button>
+                           </div>
+                           
+                        </div>
+                     </div>
+                  </li>
+                  <li class="p-0 cards-list" style="width: 300px;">
+                     <div class="card rounded-3">
+                        <img class="w-100 movie-youtube-link p-3 cards-image" src="http://books.google.com/books/content?id=LBZZCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api" style="height: 320px;" alt="image">
+                        
+                        <div class="card-body">
+                           <h3 class="cards-title">Python</h3>
+                           
+                           <p class="text-secondary card-text m-0 cards-name">David M. Beazley</p>               
+                           <p class="card-text text-secondary cards-year">2009</p>               
+                           <div class="cards-button">
+                              <div class="mb-1 d-flex gap-1">
+                                 <button type="button" class="btn w-100 btn-warning">Bookmark</button>
+                                 <button type="button" class="btn w-100 btn-light text-primary">More Info</button>
+                              </div>
+                              <button type="button" class="btn w-100 btn-secondary">Read</button>
+                           </div>
+                           
+                        </div>
+                     </div>
+                  </li>
+                  <li class="p-0 cards-list" style="width: 300px;">
+                     <div class="card rounded-3">
+                        <img class="w-100 movie-youtube-link p-3 cards-image" src="http://books.google.com/books/content?id=tNjrDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api" style="height: 320px;" alt="image">
+                        
+                        <div class="card-body">
+                           <h3 class="cards-title">Python</h3>
+                           
+                           <p class="text-secondary card-text m-0 cards-name">David M. Beazley</p>               
+                           <p class="card-text text-secondary cards-year">2009</p>               
+                           <div class="cards-button">
+                              <div class="mb-1 d-flex gap-1">
+                                 <button type="button" class="btn w-100 btn-warning">Bookmark</button>
+                                 <button type="button" class="btn w-100 btn-light text-primary">More Info</button>
+                              </div>
+                              <button type="button" class="btn w-100 btn-secondary">Read</button>
+                           </div>
+                           
+                        </div>
+                     </div>
+                  </li>
+                  <li class="p-0 cards-list" style="width: 300px;">
+                     <div class="card rounded-3">
+                        <img class="w-100 movie-youtube-link p-3 cards-image" src="http://books.google.com/books/content?id=uA5uCQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api" style="height: 320px;" alt="image">
+                        
+                        <div class="card-body">
+                           <h3 class="cards-title">Python</h3>
+                           
+                           <p class="text-secondary card-text m-0 cards-name">David M. Beazley</p>               
+                           <p class="card-text text-secondary cards-year">2009</p>               
+                           <div class="cards-button">
+                              <div class="mb-1 d-flex gap-1">
+                                 <button type="button" class="btn w-100 btn-warning">Bookmark</button>
+                                 <button type="button" class="btn w-100 btn-light text-primary">More Info</button>
+                              </div>
+                              <button type="button" class="btn w-100 btn-secondary">Read</button>
+                           </div>
+                           
+                        </div>
+                     </div>
+                  </li>
+                  <li class="p-0 cards-list" style="width: 300px;">
+                     <div class="card rounded-3">
+                        <img class="w-100 movie-youtube-link p-3 cards-image" src="http://books.google.com/books/content?id=PGD_CAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api" style="height: 320px;" alt="image">
+                        
+                        <div class="card-body">
+                           <h3 class="cards-title">Python</h3>
+                           
+                           <p class="text-secondary card-text m-0 cards-name">David M. Beazley</p>               
+                           <p class="card-text text-secondary cards-year">2009</p>               
+                           <div class="cards-button">
+                              <div class="mb-1 d-flex gap-1">
+                                 <button type="button" class="btn w-100 btn-warning">Bookmark</button>
+                                 <button type="button" class="btn w-100 btn-light text-primary">More Info</button>
+                              </div>
+                              <button type="button" class="btn w-100 btn-secondary">Read</button>
+                           </div>
+                           
+                        </div>
+                     </div>
+                  </li>
+                  <li class="p-0 cards-list" style="width: 300px;">
+                     <div class="card rounded-3">
+                        <img class="w-100 movie-youtube-link p-3 cards-image" src="http://books.google.com/books/content?id=trvUCgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api" style="height: 320px;" alt="image">
+                        
+                        <div class="card-body">
+                           <h3 class="cards-title">Python</h3>
+                           
+                           <p class="text-secondary card-text m-0 cards-name">David M. Beazley</p>               
+                           <p class="card-text text-secondary cards-year">2009</p>               
+                           <div class="cards-button">
+                              <div class="mb-1 d-flex gap-1">
+                                 <button type="button" class="btn w-100 btn-warning">Bookmark</button>
+                                 <button type="button" class="btn w-100 btn-light text-primary">More Info</button>
+                              </div>
+                              <button type="button" class="btn w-100 btn-secondary">Read</button>
+                           </div>
+                           
+                        </div>
+                     </div>
+                  </li>
+               </ul>
+
+               <!-- PAGINATIONS  -->
+               <ul class="pagination gap-2 text-secondary justify-content-center">
+                  <li class="page-item"><a class="page-link" href="#">&#60</a></li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">...</a></li>
+                  <li class="page-item"><a class="page-link" href="#">9</a></li>
+                  <li class="page-item"><a class="page-link" href="#">10</a></li>
+                  <li class="page-item"><a class="page-link" href="#">&#62</a></li>
+                </ul>
+            </div> 
+         </div>
+      </section>
+   </main>
+
+   <!-- Template Bookmarks  -->
+   <template id="template-bookmarks">
+      <li class="rounded-3 d-flex bg-light p-3 justify-content-between mb-2">
+         <div>
+            <h5 class="h5 m-0">Python</h5>
+            <p class="text-secondary m-0">David M.Beazly</p>
+         </div>
+         <div class="d-flex align-items-center gap-1">
+            <span class="btn p-0"><img src="./image/iconread.svg" alt="info"></span>
+            <span class="btn p-0"><img src="./image/icondelete.svg" alt="del"></span>
+         </div>
+      </li>
+   </template>
+
+
+   <!-- Template Cards -->
+   <template id="template-card">
+      <li class="p-0 cards-list" style="width: 300px;">
+         <div class="card rounded-3">
+            <img class="w-100 movie-youtube-link p-3 cards-image" src="https://picsum.photos/300/200" alt="image">
+            
+            <div class="card-body">
+               <h3 class="cards-title">Python</h3>
+               
+               <p class="text-secondary card-text m-0 cards-name">David M. Beazley</p>               
+               <p class="card-text text-secondary cards-year">2009</p>               
+               <div class="cards-button">
+                  <div class="mb-1 d-flex gap-1">
+                     <button type="button" class="btn w-100 btn-warning">Bookmark</button>
+                     <button type="button" class="btn w-100 btn-light text-primary">More Info</button>
+                  </div>
+                  <button type="button" class="btn w-100 btn-secondary">Read</button>
+               </div>
+               
+            </div>
+         </div>
+      </li>
+   </template>
+
+   <script src="./js/bjsfiles/bootstrap.js"></script>
+   <script src="./js/main.js"></script>
+</body>
+</html>
