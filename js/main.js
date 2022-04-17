@@ -1,45 +1,53 @@
-// Header elements
+// Get element in Html
 let elForm = document.querySelector("#search-form");
 let elFormInput = document.querySelector("#search-input");
 
 let elSearchResult = document.querySelector("#show-result");
 let elNewestBtn = document.querySelector("#btn-newest");
 
-let elTemplateBookmarks = document.querySelector("#template-bookmarks").content;
-let elTemplateCards = document.querySelector("#template-card").content;
-
 let elBookmarksList = document.querySelector("#bookmarks-list");
 
-// Fetch Cards Data
-(async function() {
-    let responce = await fetch(`https://www.googleapis.com/books/v1/volumes?q=$%7B%7D`)
-    let data = await responce.json()
-    let newdata  = data.items
+let elTemplateBookmarks = document.querySelector("#template-bookmarks").content;
+let elTemplateCards = document.querySelector("#template-cards").content;
 
-    // renderBookmarks(newdata, elBookmarksList)
-    console.log(newdata);
-})();
+console.log("salom");
 
+// Render Bookmarks
+elForm.addEventListener("submit", function(evt) {
+    evt.preventDefault();
 
-/*
-// Render Users...
-function renderBookmarks(array, node) {
-    // node.innerHTML = null 
+    let inputValue = elFormInput.value.trim()
+
+    ;(async function() {
+        let responce = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${inputValue}`)
+        let data = await responce.json()
+        let newdata = data.items
+        
+        renderBookMarks(newdata, elBookmarksList) 
+        console.log(newdata);   
+    })();
     
-    if (array.length > 0) {
-        let booksFragment = document.createDocumentFragment()
-        
-        array.forEach(item => {
-            let booksTemplate = elTemplateCards.cloneNode(true) 
-            
-            booksTemplate.querySelector(".cards-image").src = item.smallThumbnail
-            // booksTemplate.querySelector("#users-email").textContent = item.email
-            
-            booksFragment.appendChild(booksTemplate)
-        });
-        
-        node.appendChild(booksFragment)
-        elSearchResult.textContent = array.length    
-    }
+    elSearchResult.value = null
+})
+
+
+function renderBookMarks(data, node) {
+    node.innerHTML = null
+
+    let booksFragment = document.createDocumentFragment()
+
+    array.forEach(item => {
+        let booksCard = elTemplateCards.cloneNode(true)
+
+        booksCard.querySelector(".cards-image").src = item.volumeInfo.imageLinks.smallThumbnail;
+        booksCard.querySelector(".cards-title").textContent = item.volumeInfo.title;
+        booksCard.querySelector(".cards-year").textContent = item.volumeInfo.authors;
+        booksCard.querySelector(".cards-title").textContent = item.volumeInfo.title;
+
+        booksFragment.appendChild(booksCard)
+    });
+
+    node.appendChild(booksFragment)
+
+    elSearchResult.textContent = array.length
 }
-*/
